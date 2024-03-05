@@ -6,7 +6,7 @@ node {
     stage('Update Git') {
         script {
             catchError(buildResult: 'SUCCESS', stageResult:'FAILURE') {
-                withCredentials([usernamePassword(credentialsId: 'example-votin-app', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'github-mutlibranch-pipe01', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh "git config user.email pipilacha@email.com"
                         sh "git config user.name pipilacha"
                         sh "cat vote-ui-deployment.yaml"
