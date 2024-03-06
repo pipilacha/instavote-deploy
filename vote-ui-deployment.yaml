@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: vote-ui-cont
-        image: docker.io/pipilacha/vote:f6cf1d1cbe82eeb7ab0414053db888f489f42e60
+        image: docker.io/pipilacha/vote:4858347b7b1757756596b173fc2d55f72adfe507
         ports:
         - containerPort: 80
