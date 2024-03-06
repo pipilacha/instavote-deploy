@@ -19,4 +19,12 @@ node {
             }
         }
     }
+    post{
+        failure{
+            slackSend (message: "Deploy failed: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+        }
+        success{
+            slackSend (message: "Deploy sucess: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+        }
+    }
 }
